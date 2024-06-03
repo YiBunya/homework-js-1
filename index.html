@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            width: 200px;
+            height: 150px;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        #result{
+            width: 100%;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple calculator</h1>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="4">
+                <div id="result"></div>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="sum()">+</button></td>
+            <td><button onclick="sam()">-</button></td>
+            <td><button onclick="mul()">x</button></td>
+            <td><button onclick="div()">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num6()">6</button></td>
+            <td><button onclick="num7()">7</button></td>
+            <td><button onclick="num8()">8</button></td>
+            <td><button onclick="num9()">9</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num2()">2</button></td>
+            <td><button onclick="num3()">3</button></td>
+            <td><button onclick="num4()">4</button></td>
+            <td><button onclick="num5()">5</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num1()">1</button></td>
+            <td><button onclick="num0()">0</button></td>
+            <td><button onclick="get()">=</button></td>
+            <td><button onclick="clearAll()">C</button></td>
+        </tr>
+    </table>
+
+        <script>
+            function sum(){
+                document.getElementById('result').innerHTML += '+';
+            }
+            function sam(){
+                document.getElementById('result').innerHTML += '-';
+            }
+            function div(){
+                document.getElementById('result').innerHTML += '/';
+            }
+            function mul(){
+                document.getElementById('result').innerHTML += '*';
+            }
+            function num1(){
+                document.getElementById('result').innerHTML += '1';
+            }
+            function num2(){
+                document.getElementById('result').innerHTML += '2';
+            }
+            function num3(){
+                document.getElementById('result').innerHTML += '3';
+            }
+            function num4(){
+                document.getElementById('result').innerHTML += '4';
+            }
+            function num5(){
+                document.getElementById('result').innerHTML += '5';
+            }
+            function num6(){
+                document.getElementById('result').innerHTML += '6';
+            }
+            function num7(){
+                document.getElementById('result').innerHTML += '7';
+            }
+            function num8(){
+                document.getElementById('result').innerHTML += '8';
+            }
+            function num9(){
+                document.getElementById('result').innerHTML += '9';
+            }
+            function num0(){
+                document.getElementById('result').innerHTML += '0';
+            }
+            function get(){
+                let res = document.getElementById('result').innerHTML;
+                document.getElementById('result').innerHTML = eval(res);
+            }
+            function clearAll(){
+                document.getElementById('result').innerHTML='';
+            }
+        </script>
+</body>
+
+</html>
